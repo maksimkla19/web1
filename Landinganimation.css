@@ -1,0 +1,302 @@
+Body{
+    padding: 0%;
+    margin: 0%;
+    background-color: rgba(51, 48, 48, 0.904);
+    transition: all 3s;
+    font-size: 16px;
+    scrollbar-base-color: #000000;
+}
+
+.preloader{
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    font-family: sans-serif;
+    color: white;
+    transition: all 0.9s ease-out;
+    z-index: 1000;
+
+}
+.preloader--hide {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+}
+
+.preloader__loader, .preloader_percents{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.preloader_percents {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+
+
+
+#wrapper{
+    width: 100%;
+    height:950px;
+    position: relative;
+    overflow: hidden;
+    background-color:#313030f8;
+    background-image: url(img/721397.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:100%;
+    transition: all 1.5s;
+    top: 10%;
+    opacity:1;
+}
+
+body:hover #wrapper{
+    transition: all 1.5s ;
+    background-color: rgb(71, 65, 65);
+}
+
+body:hover{
+    background-color: rgb(0, 0, 0);
+    transition: all 3s;
+}
+
+#topline{
+    height:10%;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    transition: all 0.7s;
+    position: absolute;
+}
+ #topline:hover{
+    transition: all 0.7s;
+    background-color: rgb(8, 8, 8);
+
+} 
+a{
+    text-decoration: none;
+}
+
+ul{
+    display: flex;
+    justify-content: right;
+    align-items: right;
+} 
+ul li{
+    list-style: none;
+    margin-right:300px;
+    margin-top: 10px;
+    transition: all 1s;
+}
+ ul li a{
+    text-decoration:none;
+    color:rgb(0, 0, 0);
+    border-radius:50px;
+    font-size:30px;
+    transition: all 1s;
+    color:rgb(255, 255, 255);
+    font-family: 'Roboto Condensed', sans-serif;
+}
+ ul li a:hover{
+    background-color:  rgb(0, 0, 0);
+    color:#af0b0b;
+    transition: all 1s;
+}
+
+Ul li:hover{
+    transition: all 0.7s;
+    transform: scale(1.2);
+}
+#AboutText{
+    width:100%;
+    height: 800px;
+    background: black;
+    margin-top: 140px;
+    transition: all 2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#aboutText:hover{
+    background: rgb(63, 63, 61);
+    transition: all 5s;
+    transform: scale(1.1);
+}
+
+#aboutText:hover{
+    transition: all 5s;
+    transform: scale(1);
+}
+
+#intextabout{
+    width: 60%;
+    height: 64%;
+    background-color: rgb(34, 33, 33);
+    transition: all 2s;
+    color:  rgb(53, 25, 18);
+    font-size: 47px;
+    border-radius:30px ;
+    font-family: 'Roboto Condensed', sans-serif;
+    outline: 5px solid rgb(24, 17, 16);
+    cursor: pointer;
+    position: absolute;
+    opacity: 0.4;
+}
+#intextabout:Hover{
+    background-color:rgb(92, 46, 46);
+    transition: all 4s;
+    transform: scale(0.9);
+    color: rgb(39, 21, 104);
+    outline: 4px solid rgb(255, 0, 0);
+    opacity: 1;
+}
+#selectrolewrapper{
+    height: 1000px;
+    width: 100%;
+    background: radial-gradient(rgb(0, 0, 0),rgb(56, 54, 54)),rgb(0, 0, 0);
+    float: left;
+    align-items: center;
+    justify-content: space-between;
+    position: inherit;  
+    
+}
+#killer{
+    width:90%;
+    height:32%;
+    outline: 1px solid rgb(43, 40, 40);
+    margin-left: 100px;
+    margin-top: 150px;
+    border-radius: 50px;
+    background-image: url(../CSS/img/wallpaperflare.com_wallpaper.jpg);
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-origin:border-box;
+    font-size: 70px;
+    text-align: center;
+    transition: all 2s;
+    opacity: 0.4;
+    cursor: pointer;
+    color: rgb(41, 39, 39);
+}
+#survivor{
+    width:90%;
+    height:32%;
+    outline: 1px solid rgb(41, 41, 46);
+    margin-left: 100px;
+    margin-top: 80px;
+    border-radius: 50px;
+    background-image: url(../CSS/img/survs.jpg);
+    opacity: 0.4;
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-origin:border-box;
+    font-size: 70px;
+    text-align: center;
+    transition: all 2s;
+    cursor: pointer;
+    color:rgb(51, 49, 49);
+}
+#killer:hover{
+    transform: scale(1.1);
+    transition: all 2s;
+    outline: 5px solid rgba(124, 43, 43, 0.685);
+    color: rgb(184, 0, 0);
+    font-size: 100px;
+    opacity: 1.1;
+}
+#survivor:hover{
+    transform: scale(1.1);
+    transition: all 2s;
+    outline: 5px solid rgba(56, 57, 143, 0.616);
+    color: rgb(42, 57, 131);
+    font-size: 100px;
+    opacity: 1.1;
+}
+#TripleHub{
+    width: 100%;
+    height: 1400px;
+    background-color: rgb(39, 38, 38);
+    align-items: center;
+    text-align: center;
+    float: left;
+    justify-content:center;
+    position: relative;
+    transition: all 1s;
+    flex-direction: column;
+}
+#TripleHub:hover{
+    background-color: #464343;
+    transition: all 1s;
+}
+#FirstHub{
+    width: 80%;
+    height: 50%;
+    outline: #000000 4px solid;
+    float: left;
+    align-items: center;
+    justify-content: left;
+    margin-top: 200px;
+    margin-left: 180px;
+    background-color: rgb(8, 6, 6);
+    transition: all 0.6s;
+    background-image: url(img/The_Xenomorph_Lore_1920x1080_04f7de266a.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:auto;
+    cursor: pointer;
+    border-radius: 30px;
+    
+}
+#FirstHub:hover{
+    transition: all 0.6s;
+    transform: scale(1.1);
+    padding-left: 20px;
+    margin-right: 20px;
+}
+
+#InfoFH{
+    outline: 1px solid rgb(53, 47, 47);
+    width: 80%;
+    height: 30%;
+    margin-left: 180px;
+    margin-top: 40px;
+    float: left;
+    transition: all 0.6s;
+    background-color: #000000;
+    border-radius: 20px;
+}
+#InfoFH:hover{
+    transition: all 0.6s;
+    transform: scale(1.1);
+}
+  
+ 
+  @media (max-width: 768px) {
+    body {
+      font-size: 14px; 
+    }
+  
+    #topline {
+      background-color: #0c0b0b; 
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .content {
+      width: 80%;
+    }
+  }
+  
+ 
+  @media (min-width: 1025px) {
+    .sidebar {
+      display: block;
+    }
+  }

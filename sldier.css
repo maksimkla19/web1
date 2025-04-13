@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+  --max-container: 80rem;
+  --gutter:2rem;
+}
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body{
+  overflow-x:hidden;
+}
+html{
+  font-size:62.5%;
+}
+body{
+  display:grid;
+  grid-template-columns:1fr var(--gutter) minmax(0,var(--max-container)) var(--gutter) 1fr;
+  grid-template-rows:1fr auto 1fr;
+  height:100vh;
+  padding-top:2rem;
+  font-family: Montserrat,sans-serif;
+  font-size:1.6rem;
+  &>*{
+    grid-column:3;
+    grid-row:2
+  }
+}
+a,button{
+  font-family: inherit;
+  color: inherit;
+}
+button{
+  background-color: transparent;
+  font-size:inherit;
+  border:none;
+  cursor:pointer;
+  &:hover{
+    outline:none;
+  }
+}
+ul{
+  padding-left:1.8rem;
+  &[class]{
+    padding-left:unset;
+    list-style:none;
+  }
+}
+img{
+  display:block;
+  width:100%;  
+  object-fit:cover;
+}
+
+
+
+.slider{  
+  display: grid;
+  justify-items:center;
+  & > *{
+    grid-column:1;
+    grid-row:1;
+  }
+}
+.track{
+  --track-w:80%;
+  --perPage:3;
+  --gap:20px;
+  --total-gap:calc((var(--perPage) - 1) * var(--gap));
+  --slide-w:calc((100% - var(--total-gap)) / var(--perPage));
+  width:var(--track-w); 
+  overflow:hidden;
+}
+.list{  
+  display: flex;  
+  gap:var(--gap);
+  transition: transform .3s ease-in-out;
+}
+.slide{
+  flex-shrink:0; 
+  width:var(--slide-w); height:25rem;
+  border:1px solid #aaa;
+  img{ height:100%; }
+}
+.arrows{  display: flex; justify-content:space-between;
+  align-self:center; width:100%;
+}
+.arrow{  aspect-ratio:1; width:4rem;
+  color:white; background-color: #666;
+  font-size:2.8rem; font-weight: 700;
+  border-radius:100vw; cursor:pointer;  
+}
+@media (max-width: 768px){
+  .track{ --track-w:100%; --perPage:2; }
+  .arrows{ align-self:end; transform: translateY(110%); }
+}
+@media (max-width: 428px){
+  .track{ --perPage:1; }
+}
